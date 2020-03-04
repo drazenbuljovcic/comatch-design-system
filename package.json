@@ -1,0 +1,31 @@
+{
+    "name": "@comatch/design-system",
+    "version": "0.0.1",
+    "description": "A set of rules and components (react) to simplify work when adopting Comatch styles.",
+    "main": "index.js",
+    "repository": "git@github.com:COMATCH/comatch-design-system.git",
+    "author": "Stanimir Stoychev <xstukixs@gmail.com>",
+    "license": "MIT",
+    "private": false,
+    "devDependencies": {
+        "@types/node": "^13.7.7",
+        "@types/webpack": "^4.41.7",
+        "@typescript-eslint/eslint-plugin": "^2.22.0",
+        "@typescript-eslint/parser": "^2.22.0",
+        "eslint": "^6.8.0",
+        "eslint-config-airbnb-typescript": "^7.0.0",
+        "eslint-config-prettier": "^6.10.0",
+        "eslint-import-resolver-webpack": "^0.12.1",
+        "eslint-plugin-import": "^2.20.1",
+        "eslint-plugin-jest": "^23.8.1",
+        "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-prettier": "^3.1.2",
+        "eslint-plugin-react": "^7.18.3",
+        "eslint-plugin-react-hooks": "^2.5.0",
+        "prettier": "^1.19.1",
+        "ts-node": "^8.6.2",
+        "typescript": "^3.8.3",
+        "webpack": "^4.42.0",
+        "webpack-cli": "^3.3.11"
+    }
+}
