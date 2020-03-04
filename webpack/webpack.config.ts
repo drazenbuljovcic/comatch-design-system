@@ -1,45 +1,25 @@
 import { Configuration } from 'webpack';
 import PATHS from './paths';
+import moduleRules from './moduleRules';
+import externalModules from './externals';
 
 const config: Configuration = {
     mode: 'production',
     entry: PATHS.SRC_INDEX,
     output: {
         path: PATHS.BUILD,
-        filename: 'design-system.bundle.js',
-    },
-    module: {
-        rules: [
-            {
-                test: /\.(j|t)sx?$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader',
-            },
-            {
-                test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-                loader: require.resolve('url-loader'),
-                options: {
-                    limit: '10000',
-                    name: 'static/media/[name].[hash:8].[ext]',
-                },
-            },
-            {
-                loader: require.resolve('file-loader'),
-                // Exclude `js` files to keep "css" loader working as it injects
-                // its runtime that would otherwise be processed through "file" loader.
-                // Also exclude `html` and `json` extensions so they get processed
-                // by webpacks internal loaders.
-                exclude: [/\.(m|j|t)sx?$/, /\.html$/, /\.json$/],
-                options: {
-                    name: 'static/media/[name].[hash:8].[ext]',
-                },
-            },
-        ],
+        filename: 'index.js',
+        library: 'ComatchDesignSystem',
+        libraryTarget: 'umd',
     },
     resolve: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
         modules: [PATHS.SRC, 'node_modules'],
     },
+    devtool: 'source-map',
+    optimization: { runtimeChunk: true },
+    module: { rules: moduleRules },
+    externals: externalModules,
 };
 
 export default config;
