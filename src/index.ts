@@ -1,9 +1,3 @@
-/**
- * Not yet...
- */
+import testReact from './test-react';
 
-(function test() {
-    console.log('this is a test');
-})();
-
-export {};
+testReact();

@@ -36,6 +36,10 @@ const config: Configuration = {
             },
         ],
     },
+    resolve: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        modules: [PATHS.SRC, 'node_modules'],
+    },
 };
 
 export default config;
