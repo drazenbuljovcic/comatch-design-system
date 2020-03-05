@@ -16,7 +16,7 @@
         "noEmit": false,
         "outDir": "./dist",
         "resolveJsonModule": true,
-        "rootDirs": ["src", "stories"],
+        "rootDir": "src",
         "skipLibCheck": true,
         "sourceMap": true,
         "strict": true,

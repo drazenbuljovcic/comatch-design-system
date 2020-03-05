@@ -1,1 +1,1 @@
-export { Button } from './Button';
+export { Paper, StyledPaper } from './components/surfaces/Paper';

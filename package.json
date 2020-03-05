@@ -9,11 +9,11 @@
     "license": "MIT",
     "private": false,
     "scripts": {
+        "build": "yarn build:library && yarn build:types",
         "build:library": "cross-env TS_NODE_PROJECT=\"tsconfig.webpack.json\" webpack --config webpack/webpack.config.ts",
         "build:types": "tsc",
-        "build": "yarn build:library && yarn build:types",
-        "storybook": "start-storybook -p 6006",
-        "build-storybook": "build-storybook"
+        "build-storybook": "build-storybook",
+        "start": "start-storybook -p 6006"
     },
     "devDependencies": {
         "@babel/plugin-proposal-class-properties": "^7.8.3",
@@ -21,6 +21,7 @@
         "@babel/preset-env": "^7.8.6",
         "@babel/preset-react": "^7.8.3",
         "@babel/preset-typescript": "^7.8.3",
+        "@storybook/addon-a11y": "^5.3.14",
         "@storybook/addon-actions": "^5.3.14",
         "@storybook/addon-links": "^5.3.14",
         "@storybook/addons": "^5.3.14",
@@ -47,6 +48,7 @@
         "eslint-plugin-react-hooks": "^2.5.0",
         "file-loader": "^5.1.0",
         "prettier": "^1.19.1",
+        "react-docgen-typescript-loader": "^3.6.0",
         "ts-node": "^8.6.2",
         "tsconfig-paths": "^3.9.0",
         "typescript": "^3.8.3",

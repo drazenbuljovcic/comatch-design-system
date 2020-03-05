@@ -5,10 +5,12 @@ export interface ComponentProps {
     children?: ReactNode;
 }
 
-const Wrapper = styled.button``;
+const Wrapper = styled.div`
+    background: green;
+`;
 
-function Button({ children }: ComponentProps) {
+function Paper({ children }: ComponentProps) {
     return <Wrapper>{children}</Wrapper>;
 }
 
-export { Button };
+export { Paper, Wrapper as StyledPaper };
