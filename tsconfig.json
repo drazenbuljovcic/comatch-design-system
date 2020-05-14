@@ -16,7 +16,7 @@
         "noEmit": false,
         "outDir": "./dist",
         "resolveJsonModule": true,
-        "rootDir": "src",
+        "rootDirs": ["src", "webpack"],
         "skipLibCheck": true,
         "sourceMap": true,
         "strict": true,
