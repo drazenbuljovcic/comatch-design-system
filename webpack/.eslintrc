@@ -1,0 +1,11 @@
+{
+    "parserOptions": {
+        "ecmaFeatures": { "jsx": false },
+        "ecmaVersion": 2018,
+        "project": "./tsconfig.json",
+        "sourceType": "module"
+    },
+    "rules": {
+        "import/no-extraneous-dependencies": "off"
+    }
+}
