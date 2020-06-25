@@ -1,4 +1,97 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
+import styled from 'styled-components';
+
+const tbodyValues = [
+    { title: 'headline1', fontSize: 24, lineHeight: 36, fontWeight: <b>Bold</b>, example: 'Lorem ipsum dolor' },
+    { title: 'headline2', fontSize: 20, lineHeight: 30, fontWeight: <b>Bold</b>, example: 'Lorem ipsum dolor' },
+    { title: 'subheadline1', fontSize: 18, lineHeight: 27, fontWeight: <b>Bold</b>, example: 'Lorem ipsum dolor' },
+    { title: 'subheadline2', fontSize: 16, lineHeight: 24, fontWeight: <b>Bold</b>, example: 'Lorem ipsum dolor' },
+    {
+        title: 'body copy',
+        fontSize: 14,
+        lineHeight: 21,
+        fontWeight: (
+            <>
+                Regular, <b>Bold</b>
+            </>
+        ),
+        example: (
+            <>
+                Lorem ipsum dolor, <b>Lorem ipsum dolor</b>
+            </>
+        ),
+    },
+    {
+        title: 'label',
+        fontSize: 12,
+        lineHeight: 18,
+        fontWeight: (
+            <>
+                Regular, <b>Bold</b>
+            </>
+        ),
+        example: (
+            <>
+                Lorem ipsum dolor, <b>Lorem ipsum dolor</b>
+            </>
+        ),
+    },
+    {
+        title: 'foot note',
+        fontSize: 10,
+        lineHeight: 15,
+        fontWeight: (
+            <>
+                Regular, <b>Bold</b>
+            </>
+        ),
+        example: (
+            <>
+                Lorem ipsum dolor, <b>Lorem ipsum dolor</b>
+            </>
+        ),
+    },
+];
+
+const FontTable = styled.table<{
+    fontSize: number;
+}>`
+    margin-top: 30px;
+    width: 60%;
+    text-align: center;
+
+    td {
+        border-bottom: 1pt solid grey;
+        padding: 15px;
+    }
+    td:nth-child(2),
+    td:nth-child(3),
+    td:nth-child(4) {
+        font-size: 16px;
+    }
+
+    th {
+        text-align: -webkit-center;
+        border-bottom: 1pt solid grey;
+        padding: 15px;
+    }
+
+    th:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    td:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    td:first-child {
+        font-size: 14px;
+    }
+    ${({ fontSize }) => `
+    tr:last-child {
+        font-size: ${fontSize};
+    }
+    `}
+`;
 
 function TypeScale() {
     return (
@@ -12,7 +105,29 @@ function TypeScale() {
                 The type scale is a combination of 6 styles that are supported by the type system. It contains reusable
                 categories of text, each with an intended application and meaning.
             </p>
-            <div>Table..</div>
+            <FontTable {...tbodyValues}>
+                <thead>
+                    <tr>
+                        <th>IDK</th>
+                        <th>FONT SIZE</th>
+                        <th>LINE HEIGHT</th>
+                        <th>FONT WEIGHT</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {tbodyValues.map(({ title, fontSize, lineHeight, fontWeight, example }) => (
+                        <tr key={title} {...fontSize}>
+                            <td>{title}</td>
+                            <td>{fontSize}</td>
+                            <td>{lineHeight}</td>
+                            <td>{fontWeight}</td>
+                            <td>{example}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </FontTable>
         </div>
     );
 }
