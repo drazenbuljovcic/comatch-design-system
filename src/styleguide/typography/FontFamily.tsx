@@ -1,10 +1,44 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
+import styled from 'styled-components';
 
+const Wrapper = styled.div`
+    display: flex;
+    margin-bottom: 30px;
+`;
+const FontExample = styled.div`
+    margin-right: 20px;
+    p {
+        line-height: 50px;
+        font-size: 48px;
+        border-bottom: 1px solid black;
+    }
+    h5 {
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        margin: 5px;
+    }
+`;
 function FontFamily() {
     return (
         <div>
-            <h3>TBD</h3>
+            <Wrapper>
+                <FontExample>
+                    <p>Aa</p>
+                    <h5>regular</h5>
+                </FontExample>
+                <FontExample>
+                    <p>
+                        <b>Aa</b>
+                    </p>
+                    <h5>bold</h5>
+                </FontExample>
+            </Wrapper>
             <p>
                 <b>Meet ATC Overlook:</b>
                 <br />
