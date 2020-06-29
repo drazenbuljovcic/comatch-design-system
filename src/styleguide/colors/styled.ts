@@ -1,7 +1,19 @@
 import styled from 'styled-components';
 
-const Title = styled.h1`
-    font-size: 35px;
+const PageWrapper = styled.div`
+    padding: 100px;
+    h1 {
+        font-size: 72px;
+    }
+    p {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+`;
+const Title = styled.h3`
+    font-size: 14px;
     font-family: 'Montserrat', sans-serif;
 `;
 
@@ -55,4 +67,4 @@ const PalettesList = styled.div`
 
 const Page = styled.div``;
 
-export { Title, List, ListItem, Page, Palette, PalettesList };
+export { Title, List, ListItem, Page, Palette, PalettesList, PageWrapper };

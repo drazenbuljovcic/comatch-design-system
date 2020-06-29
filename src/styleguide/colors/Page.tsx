@@ -1,6 +1,7 @@
 import React from 'react';
+
 import Palette from './Palette';
-import { PalettesList, Page as Wrapper } from './styled';
+import { PalettesList, PageWrapper, Page as Wrapper } from './styled';
 import { palettes } from './constants';
 
 const colorText =
@@ -8,19 +9,21 @@ const colorText =
 
 function Page() {
     return (
-        <Wrapper>
-            <h1>Colors</h1>
-            <p>{colorText}</p>
-            <h2>Palettes</h2>
-            <PalettesList>
-                <Palette {...palettes.Primary} />
-                <Palette {...palettes.Grayscale} />
-                <Palette {...palettes.Error} />
-                <Palette {...palettes.Warning} />
-                <Palette {...palettes.Success} />
-                <Palette {...palettes.Info} />
-            </PalettesList>
-        </Wrapper>
+        <PageWrapper>
+            <Wrapper>
+                <h1>Colors</h1>
+                <p>{colorText}</p>
+                <h2>Palettes</h2>
+                <PalettesList>
+                    <Palette {...palettes.Primary} />
+                    <Palette {...palettes.Grayscale} />
+                    <Palette {...palettes.Error} />
+                    <Palette {...palettes.Warning} />
+                    <Palette {...palettes.Success} />
+                    <Palette {...palettes.Info} />
+                </PalettesList>
+            </Wrapper>
+        </PageWrapper>
     );
 }
 
