@@ -8,10 +8,14 @@ const Wrapper = styled.div`
 `;
 const FontExample = styled.div`
     margin-right: 20px;
-    p {
+    h4 {
         line-height: 50px;
         font-size: 48px;
         border-bottom: 1px solid black;
+        margin: 0;
+        &:first-child {
+            font-weight: 100;
+        }
     }
     h5 {
         font-size: 14px;
@@ -29,13 +33,13 @@ function FontFamily() {
         <div>
             <Wrapper>
                 <FontExample>
-                    <p>Aa</p>
+                    <h4>Aa</h4>
                     <h5>regular</h5>
                 </FontExample>
                 <FontExample>
-                    <p>
+                    <h4>
                         <b>Aa</b>
-                    </p>
+                    </h4>
                     <h5>bold</h5>
                 </FontExample>
             </Wrapper>
