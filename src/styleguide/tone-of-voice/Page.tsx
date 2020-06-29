@@ -32,7 +32,7 @@ const Wrapper = styled.div`
     }
 
     > div:not(:first-child) {
-        margin-top: 60px;
+        margin-top: 100px;
     }
 `;
 
