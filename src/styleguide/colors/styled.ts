@@ -12,6 +12,7 @@ const PageWrapper = styled.div`
         font-size: 32px;
     }
 `;
+
 const Title = styled.h3`
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;

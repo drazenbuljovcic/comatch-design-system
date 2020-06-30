@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import styled from 'styled-components';
@@ -54,26 +55,23 @@ const tbodyValues = [
     },
 ];
 
-const FontTable = styled.table<{
-    fontSize: number;
-}>`
+const FontTable = styled.table`
     margin-top: 30px;
     width: 70%;
     text-align: center;
+    border-collapse: collapse;
+    border-color: inherit;
+    border-spacing: 0;
 
     td {
-        border-bottom: 1pt solid grey;
+        border-bottom: 1pt solid #c0c0c0;
         padding: 15px;
-    }
-    td:nth-child(2),
-    td:nth-child(3),
-    td:nth-child(4) {
         font-size: 16px;
     }
 
     th {
         text-align: -webkit-center;
-        border-bottom: 1pt solid grey;
+        border-bottom: 1pt solid #c0c0c0;
         padding: 15px;
     }
 
@@ -86,10 +84,13 @@ const FontTable = styled.table<{
     td:first-child {
         font-size: 14px;
     }
+`;
+
+const TableRow = styled.tr<{ fontSize: number }>`
     ${({ fontSize }) => `
-    tr:last-child {
-        font-size: ${fontSize};
-    }
+        td:last-child {
+            font-size: ${fontSize}px;
+        }
     `}
 `;
 
@@ -108,7 +109,7 @@ function TypeScale() {
             <FontTable>
                 <thead>
                     <tr>
-                        <th>IDK</th>
+                        <th />
                         <th>FONT SIZE</th>
                         <th>LINE HEIGHT</th>
                         <th>FONT WEIGHT</th>
@@ -118,13 +119,13 @@ function TypeScale() {
 
                 <tbody>
                     {tbodyValues.map(({ title, fontSize, lineHeight, fontWeight, example }) => (
-                        <tr key={title}>
+                        <TableRow key={title} fontSize={fontSize}>
                             <td>{title}</td>
                             <td>{fontSize}</td>
                             <td>{lineHeight}</td>
                             <td>{fontWeight}</td>
-                            <td style={{ fontSize }}>{example}</td>
-                        </tr>
+                            <td>{example}</td>
+                        </TableRow>
                     ))}
                 </tbody>
             </FontTable>
