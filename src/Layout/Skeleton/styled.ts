@@ -65,7 +65,7 @@ const SmallTextBlock = styled.div`
 
 const MediumTextBlock = styled.div`
     padding: 5px;
-    width: 25%;
+    width: 50%;
     display: flex;
     flex-direction: column;
 `;
