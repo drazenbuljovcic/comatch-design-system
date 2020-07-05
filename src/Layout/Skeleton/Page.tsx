@@ -8,13 +8,10 @@ const Wrapper = styled.div`
 
     h1 {
         font-size: 72px;
-        margin: 0 0 30px 0;
+        margin: 0 0 20px 0;
     }
     p {
         font-size: 18px;
-    }
-    > div:not(:first-child) {
-        margin-top: 100px;
     }
 `;
 function Page() {
