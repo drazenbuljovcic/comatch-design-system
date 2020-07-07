@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import styled from 'styled-components';
 
@@ -23,6 +24,15 @@ function Page() {
                 frustration.
             </p>
             <Skeleton />
+            <p>
+                <b>Container:</b> replaces cards and panels
+                <br />
+                <b>Rexctangle:</b> replaces thumbnails, graphs, tables
+                <br />
+                <b>Circle:</b> replaces avatars
+                <br />
+                <b>Text:</b> replaces h1, h2, sh1, sh2, body
+            </p>
         </Wrapper>
     );
 }

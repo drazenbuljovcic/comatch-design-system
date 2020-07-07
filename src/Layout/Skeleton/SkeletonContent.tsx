@@ -1,50 +1,37 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
+import { AvatarWrapper, Container, Header, MediumTextBlock, SmallTextBlock, Wrapper } from './styled';
 
-import {
-    Wrapper,
-    Header,
-    Title,
-    SubTitle,
-    Container,
-    ContainerTitle,
-    Rextangle,
-    AvatarWrapper,
-    SmallTextBlock,
-    HalfLineText,
-    MediumTextBlock,
-    Avatar,
-    RtlText,
-    LineText,
-} from './styled';
+import Skeleton from './ReusableSkeleton';
 
 function SkeletonContent() {
     return (
         <Wrapper>
             <Header />
-            <Title />
-            <SubTitle />
+            <Skeleton height={12} width={330} />
+            <Skeleton height={20} width={179} />
             <Container>
-                <ContainerTitle />
-                <Rextangle />
+                <Skeleton height={16} width={450} />
+                <Skeleton height={236} width={1040} />
             </Container>
-            <SubTitle />
+            <Skeleton height={16} width={150} />
             <Container>
                 <AvatarWrapper>
                     <SmallTextBlock>
-                        <LineText />
-                        <RtlText />
+                        <Skeleton height={16} width={50} />
+                        <Skeleton height={14} width={30} />
                     </SmallTextBlock>
-                    <Avatar />
+                    <Skeleton variant="circle" height={47} width={47} />
                     <MediumTextBlock>
-                        <LineText />
-                        <HalfLineText />
+                        <Skeleton height={18} width={234} />
+                        <Skeleton height={13} width={135} />
                     </MediumTextBlock>
                 </AvatarWrapper>
-                <LineText />
-                <LineText />
-                <HalfLineText />
-                <HalfLineText />
+                <Skeleton height={14} width={1037} />
+                <Skeleton height={14} width={1037} />
+                <Skeleton height={14} width={1037} />
+                <Skeleton height={14} width={615} />
+                <Skeleton height={14} width={615} />
             </Container>
         </Wrapper>
     );
