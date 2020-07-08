@@ -39,6 +39,9 @@ const SmallTextBlock = styled.div`
     > div:not(:last-child) {
         margin-bottom: 5px;
     }
+    div:nth-child(2) {
+        align-self: flex-end;
+    }
 `;
 
 const MediumTextBlock = styled.div`
