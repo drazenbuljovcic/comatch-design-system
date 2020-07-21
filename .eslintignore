@@ -1,6 +1,7 @@
-dist/
 build/
-node_modules/
 coverage/
-serviceWorker.ts
-config-overrides.js
+node_modules/
+storybook-build/
+
+jest.config.js
+rollup.config.js
