@@ -1,9 +1,10 @@
 import React from 'react';
 import { PageWrapper } from '../../core/storybook';
-import Card from '../Card';
+import { Card } from '..';
 
 export default {
     title: 'Containers/Card',
+    component: Card,
 };
 
 export const Intro = () => (

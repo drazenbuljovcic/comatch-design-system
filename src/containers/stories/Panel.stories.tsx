@@ -1,9 +1,10 @@
 import React from 'react';
 import { PageWrapper } from '../../core/storybook';
-import Panel from '../Panel';
+import { Panel } from '..';
 
 export default {
     title: 'Containers/Panel',
+    component: Panel,
 };
 
 export const Intro = () => (

@@ -1,9 +1,10 @@
 import React from 'react';
 import { PageWrapper } from '../../core/storybook';
-import Paper from '../Paper';
+import { Paper } from '..';
 
 export default {
     title: 'Containers/Paper',
+    component: Paper,
 };
 
 export const Intro = () => (

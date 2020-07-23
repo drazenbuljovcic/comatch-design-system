@@ -1,4 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import classnames from 'classnames';
+import { WithClassAndId } from './types';
 
 /**
  * A helper method which will simplify the usage of `generateCss` function/prop.
@@ -12,4 +15,23 @@ function runCSSGeneratorFunction(props: any = {}) {
     return generateCss(rest);
 }
 
-export { runCSSGeneratorFunction };
+function buildComponentIdAndClassNameFromProps(
+    { className, id }: WithClassAndId,
+    ...componentClassNames: Parameters<typeof classnames>
+) {
+    return {
+        ...(id && { id }),
+        className: classnames(...componentClassNames, className),
+    };
+}
+
+function noop(...args: any[]) {}
+
+const uniqueIds = [];
+function uniqueId(prefix = '') {
+    const nextId = uniqueIds.length;
+    uniqueIds[nextId] = nextId;
+    return `${prefix}${nextId}`;
+}
+
+export { buildComponentIdAndClassNameFromProps, noop, runCSSGeneratorFunction, uniqueId };
