@@ -3,6 +3,7 @@ export { default as Checkbox, StyledCheckbox, StyledCheckboxInput } from './Chec
 export { default as Currency, StyledCurrency } from './Currency';
 export { default as DatePicker, StyledDatePicker } from './DatePicker';
 export { default as HelperText, StyledHelperText } from './HelperText';
+export { default as Image, StyledImage } from './Image';
 export { default as Label, StyledLabel } from './Label';
 export { default as Select, StyledSelect } from './Select';
 export { default as TextInput, StyledTextInput } from './TextInput';
