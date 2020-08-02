@@ -10,7 +10,10 @@ export default {
 export const Intro = () => (
     <PageWrapper>
         <h1>DatePicker</h1>
-        <p>TBD</p>
+        <p>
+            This component opens a calendar where the user is able to pick a specific date or a date range. A click into
+            the field opens the calendar and the user can change the month and day.
+        </p>
     </PageWrapper>
 );
 
