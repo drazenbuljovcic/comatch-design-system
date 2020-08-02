@@ -10,7 +10,7 @@ export default {
 export const Intro = () => (
     <PageWrapper>
         <h1>Currency</h1>
-        <p>TBD</p>
+        <p>Used for collecting user provided currency from a list of options</p>
     </PageWrapper>
 );
 
