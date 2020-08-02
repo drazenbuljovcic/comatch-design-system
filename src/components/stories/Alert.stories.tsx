@@ -7,16 +7,6 @@ const PageWrapper = styled(DefaultPageWrapper)`
     ${StyledAlert} {
         margin: ${({ theme: { spacing } }) => spacing(3)};
     }
-    h1 {
-        font-size: 72px;
-    }
-    h3 {
-        font-size: 32px;
-    }
-    p {
-        font-size: 18px;
-        margin-bottom: 50px;
-    }
 `;
 
 export default {
