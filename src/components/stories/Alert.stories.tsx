@@ -7,6 +7,16 @@ const PageWrapper = styled(DefaultPageWrapper)`
     ${StyledAlert} {
         margin: ${({ theme: { spacing } }) => spacing(3)};
     }
+    h1 {
+        font-size: 72px;
+    }
+    h3 {
+        font-size: 32px;
+    }
+    p {
+        font-size: 18px;
+        margin-bottom: 50px;
+    }
 `;
 
 export default {
@@ -16,19 +26,27 @@ export default {
 
 export const Intro = () => (
     <PageWrapper>
-        <h1>Alert</h1>
-        <p>TBD</p>
+        <h1>Alerts</h1>
+        <p>Alerts convey information helping the user to understand the context.</p>
     </PageWrapper>
 );
 
 export const Empty = () => (
     <PageWrapper>
+        <h3>Empty Alert</h3>
         <Alert />
     </PageWrapper>
 );
 
 export const Default = () => (
     <PageWrapper>
+        <h3>Default Alerts</h3>
+        <p>
+            Default alert conveys information helping the user to understand the context. It’s typically not used in
+            response to a user action. The alert appears when the information influences the whole system and not just
+            one component. The width and height are adjustable and change according to the container it sits in (width)
+            and the amount of text (height). It can exist with (A) and without (B) a headline.
+        </p>
         <Alert title="Testing title..." type="error">
             Test...
         </Alert>
@@ -46,6 +64,8 @@ export const Default = () => (
 
 export const Inline = () => (
     <PageWrapper>
+        <h3>Inline</h3>
+        <p>Inline alert appeards when the information influences a single component.</p>
         <Alert inline title="Testing title..." type="error">
             Test...
         </Alert>
