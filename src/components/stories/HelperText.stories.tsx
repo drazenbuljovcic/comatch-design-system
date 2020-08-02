@@ -10,7 +10,7 @@ export default {
 export const Intro = () => (
     <PageWrapper>
         <h1>HelperText</h1>
-        <p>TBD</p>
+        <p>Helper text is used to complement other components and to provide information within the component</p>
     </PageWrapper>
 );
 
