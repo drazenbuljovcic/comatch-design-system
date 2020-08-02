@@ -9,19 +9,21 @@ export default {
 
 export const Intro = () => (
     <PageWrapper>
-        <h1>TextInput</h1>
-        <p>TBD</p>
+        <h1>Text Input</h1>
+        <p>Text fields let users enter and edit text.</p>
     </PageWrapper>
 );
 
 export const Default = () => (
     <PageWrapper>
+        <h3>Default Text Field</h3>
         <TextInput name="test" />
     </PageWrapper>
 );
 
 export const WithError = () => (
     <PageWrapper>
+        <h3>Text Field with Error</h3>
         <TextInput hasError label="Test" name="test" message="Test" />
     </PageWrapper>
 );
