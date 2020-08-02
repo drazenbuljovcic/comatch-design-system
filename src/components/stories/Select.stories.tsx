@@ -10,18 +10,22 @@ export default {
 export const Intro = () => (
     <PageWrapper>
         <h1>Select</h1>
-        <p>TBD</p>
+        <p>Select components are used for collecting user provided information from a list of options.</p>
     </PageWrapper>
 );
 
 export const Default = () => (
     <PageWrapper>
+        <h3>Default Selector</h3>
+        <p>Select components are used for collecting user provided information from a list of options.</p>
         <Select name="test" options={[]} />
     </PageWrapper>
 );
 
 export const WithOptions = () => (
     <PageWrapper>
+        <h3>Selector with options</h3>
+        <p>Example of selector with options where user is limited to selecting one option from dropdown list</p>
         <Select
             name="test"
             options={[
@@ -37,6 +41,8 @@ export const WithOptions = () => (
 
 export const Multi = () => (
     <PageWrapper>
+        <h3>Selector with multiple options</h3>
+        <p>Example of selector with options where user can choose more than one option from the dropdown list</p>
         <Select
             multi
             name="test"
