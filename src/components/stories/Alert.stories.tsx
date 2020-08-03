@@ -37,17 +37,21 @@ export const Default = () => (
             one component. The width and height are adjustable and change according to the container it sits in (width)
             and the amount of text (height). It can exist with (A) and without (B) a headline.
         </p>
-        <Alert title="Testing title..." type="error">
-            Test...
+        <Alert title="Headline for your information" type="error">
+            This is an info field including text like: This part of your CV is not language specific. Changes are
+            automatically updated for all CVs.
         </Alert>
-        <Alert title="Testing title..." type="info">
-            Test...
+        <Alert title="Headline for your information" type="info">
+            This is an info field including text like: This part of your CV is not language specific. Changes are
+            automatically updated for all CVs.
         </Alert>
-        <Alert title="Testing title..." type="success">
-            Test...
+        <Alert title="Headline for your information" type="success">
+            This is an info field including text like: This part of your CV is not language specific. Changes are
+            automatically updated for all CVs.
         </Alert>
-        <Alert title="Testing title..." type="warning">
-            Test...
+        <Alert title="Headline for your information" type="warning">
+            This is an info field including text like: This part of your CV is not language specific. Changes are
+            automatically updated for all CVs.
         </Alert>
     </PageWrapper>
 );
@@ -56,17 +60,21 @@ export const Inline = () => (
     <PageWrapper>
         <h3>Inline</h3>
         <p>Inline alert appeards when the information influences a single component.</p>
-        <Alert inline title="Testing title..." type="error">
-            Test...
+        <Alert inline title="Headline for your information" type="error">
+            Füllen Sie das kurze Projektbriefing aus. Je mehr Informationen Sie uns über Ihr Projekt geben, umso besser
+            können wir Berater auf Ihre Bedürfnisse „matchen“.
         </Alert>
-        <Alert inline title="Testing title..." type="info">
-            Test...
+        <Alert inline title="Headline for your information" type="info">
+            Füllen Sie das kurze Projektbriefing aus. Je mehr Informationen Sie uns über Ihr Projekt geben, umso besser
+            können wir Berater auf Ihre Bedürfnisse „matchen“.
         </Alert>
-        <Alert inline title="Testing title..." type="success">
-            Test...
+        <Alert inline title="Headline for your information" type="success">
+            Füllen Sie das kurze Projektbriefing aus. Je mehr Informationen Sie uns über Ihr Projekt geben, umso besser
+            können wir Berater auf Ihre Bedürfnisse „matchen“.
         </Alert>
-        <Alert inline title="Testing title..." type="warning">
-            Test...
+        <Alert inline title="Headline for your information" type="warning">
+            Füllen Sie das kurze Projektbriefing aus. Je mehr Informationen Sie uns über Ihr Projekt geben, umso besser
+            können wir Berater auf Ihre Bedürfnisse „matchen“.
         </Alert>
     </PageWrapper>
 );
