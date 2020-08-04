@@ -56,10 +56,10 @@ export const Default = () => (
     </PageWrapper>
 );
 
-export const Inline = () => (
+export const InlineWithTitle = () => (
     <PageWrapper>
-        <h3>Inline</h3>
-        <p>Inline alert appeards when the information influences a single component.</p>
+        <h3>Inline With Title</h3>
+        <p>Inline alert that include a title appearing when the information influences a single component.</p>
         <Alert inline title="Headline for your information" type="error">
             Füllen Sie das kurze Projektbriefing aus. Je mehr Informationen Sie uns über Ihr Projekt geben, umso besser
             können wir Berater auf Ihre Bedürfnisse „matchen“.
@@ -73,6 +73,28 @@ export const Inline = () => (
             können wir Berater auf Ihre Bedürfnisse „matchen“.
         </Alert>
         <Alert inline title="Headline for your information" type="warning">
+            Füllen Sie das kurze Projektbriefing aus. Je mehr Informationen Sie uns über Ihr Projekt geben, umso besser
+            können wir Berater auf Ihre Bedürfnisse „matchen“.
+        </Alert>
+    </PageWrapper>
+);
+export const Inline = () => (
+    <PageWrapper>
+        <h3>Inline</h3>
+        <p>Inline alert appears when the information influences a single component.</p>
+        <Alert inline type="error">
+            Füllen Sie das kurze Projektbriefing aus. Je mehr Informationen Sie uns über Ihr Projekt geben, umso besser
+            können wir Berater auf Ihre Bedürfnisse „matchen“.
+        </Alert>
+        <Alert inline type="info">
+            Füllen Sie das kurze Projektbriefing aus. Je mehr Informationen Sie uns über Ihr Projekt geben, umso besser
+            können wir Berater auf Ihre Bedürfnisse „matchen“.
+        </Alert>
+        <Alert inline type="success">
+            Füllen Sie das kurze Projektbriefing aus. Je mehr Informationen Sie uns über Ihr Projekt geben, umso besser
+            können wir Berater auf Ihre Bedürfnisse „matchen“.
+        </Alert>
+        <Alert inline type="warning">
             Füllen Sie das kurze Projektbriefing aus. Je mehr Informationen Sie uns über Ihr Projekt geben, umso besser
             können wir Berater auf Ihre Bedürfnisse „matchen“.
         </Alert>
