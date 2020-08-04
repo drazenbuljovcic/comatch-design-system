@@ -66,8 +66,8 @@ function Currency(props: ComponentProps) {
                     event.persist();
 
                     const nextValue = event.target.value ? parseFloat(event.target.value) : undefined;
-                    onChange(event, { currency: currency.label, value: nextValue });
                     setCurrentValue(nextValue);
+                    onChange(event, { currency: currency.label, value: nextValue });
                 },
                 onFocus: focus,
                 placeholder,

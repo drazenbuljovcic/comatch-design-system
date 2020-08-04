@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // import original module declarations
 import 'styled-components';
-import { Theme } from 'style';
+import { Theme } from '../src/style';
 
 // and extend them!
 declare module 'styled-components' {

@@ -19,10 +19,8 @@ function TextInput(props: ComponentProps) {
     const changeCurrentValue = useMemo(
         () => (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
             event.persist();
-            setCurrentValue((currentTextValue) => {
-                onChange(event, currentTextValue);
-                return event.target.value;
-            });
+            setCurrentValue(event.target.value);
+            onChange(event);
         },
         [onChange],
     );

@@ -36,6 +36,7 @@ export const WithOptions = () => (
         <p>Example of selector with options where user is limited to selecting one option from dropdown list</p>
         <Select
             name="test"
+            placeholder="Select Input"
             options={[
                 { id: '1', label: '1', value: '1' },
                 { id: '2', label: '2', value: '2' },
@@ -53,6 +54,7 @@ export const Multi = () => (
         <p>Example of selector with options where user can choose more than one option from the dropdown list</p>
         <Select
             multi
+            placeholder="Select Input"
             name="test"
             options={[
                 { id: '1', label: '1', value: '1' },

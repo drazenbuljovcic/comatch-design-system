@@ -17,7 +17,7 @@ import HelperText from '../HelperText';
 
 import { ComponentProps, Option } from './types';
 import { optionsAreEqual } from './helpers';
-import { AvailableOptions, FieldWrapper, SelectedOptionWrapper, SelectedOptions, Wrapper } from './styled';
+import { AvailableOptions, FieldWrapper, Placeholder, SelectedOptionWrapper, SelectedOptions, Wrapper } from './styled';
 
 function Select(props: ComponentProps) {
     const {
@@ -30,6 +30,7 @@ function Select(props: ComponentProps) {
         onChange: notifyListeners = () => {},
         onFilterOptions: filterOptions = (currentOptions: Option[], term: string) => currentOptions,
         optionsToggle = true,
+        placeholder,
         value = [],
     } = props;
 
@@ -125,6 +126,7 @@ function Select(props: ComponentProps) {
 
             <FieldWrapper {...componentsProps.selectWrapper}>
                 <SelectedOptions>
+                    {!!placeholder && !selectedOptions.length && <Placeholder>{placeholder}</Placeholder>}
                     {selectedOptions.map((option) => {
                         const optionProps = buildSelectedOptionHandler(option);
 

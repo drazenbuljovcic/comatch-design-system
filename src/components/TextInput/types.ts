@@ -14,7 +14,7 @@ export type ComponentProps = WithClassAndId &
         message?: ReactNode;
         messageType?: 'success' | 'error' | 'info' | 'warning';
         multi?: boolean;
-        onChange?: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, oldValue: string) => void;
+        onChange?: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
         placeholder?: string;
         value?: string;
     };

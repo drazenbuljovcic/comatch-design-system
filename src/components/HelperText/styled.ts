@@ -8,16 +8,16 @@ const Wrapper = styled.div<WithCssGeneratorFunction & { level?: MessageLevel }>`
     color: ${({ level, theme: { palettes } }) => {
         switch (level) {
             case 'success':
-                return palettes.success.dark;
+                return palettes.success.dark.bgColor;
 
             case 'error':
-                return palettes.error.dark;
+                return palettes.error.dark.bgColor;
 
             case 'warning':
-                return palettes.warning.dark;
+                return palettes.warning.dark.bgColor;
 
             case 'info':
-                return palettes.info.dark;
+                return palettes.info.dark.bgColor;
 
             case 'inherit':
                 return 'inherit';
