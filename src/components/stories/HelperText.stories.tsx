@@ -14,8 +14,26 @@ export const Intro = () => (
     </PageWrapper>
 );
 
-export const Default = () => (
+export const Info = () => (
     <PageWrapper>
-        <HelperText>Test</HelperText>
+        <HelperText level="info">Test</HelperText>
+    </PageWrapper>
+);
+
+export const Warning = () => (
+    <PageWrapper>
+        <HelperText level="warning">Test</HelperText>
+    </PageWrapper>
+);
+
+export const Success = () => (
+    <PageWrapper>
+        <HelperText level="success">Test</HelperText>
+    </PageWrapper>
+);
+
+export const Error = () => (
+    <PageWrapper>
+        <HelperText level="error">Test</HelperText>
     </PageWrapper>
 );
