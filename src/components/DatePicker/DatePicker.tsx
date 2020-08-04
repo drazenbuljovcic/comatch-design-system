@@ -50,9 +50,9 @@ function DatePicker(props: ComponentProps) {
             event: React.MouseEvent<HTMLLIElement, MouseEvent> | React.KeyboardEvent<HTMLInputElement>,
             newValue?: Moment,
         ) => {
-            onChange(event, newValue?.toDate());
             setSelectedDate(newValue);
             toggle();
+            onChange(event, newValue?.toDate());
         },
         [toggle, onChange],
     );

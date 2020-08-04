@@ -19,3 +19,12 @@ export const Default = () => (
         <HelperText>Test</HelperText>
     </PageWrapper>
 );
+
+export const WithLevel = () => (
+    <PageWrapper>
+        <HelperText level="error">Test</HelperText>
+        <HelperText level="success">Test</HelperText>
+        <HelperText level="warning">Test</HelperText>
+        <HelperText level="info">Test</HelperText>
+    </PageWrapper>
+);

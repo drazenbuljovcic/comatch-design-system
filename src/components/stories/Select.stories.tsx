@@ -24,6 +24,7 @@ export const WithOptions = () => (
     <PageWrapper>
         <Select
             name="test"
+            placeholder="Select Input"
             options={[
                 { id: '1', label: '1', value: '1' },
                 { id: '2', label: '2', value: '2' },
@@ -39,6 +40,7 @@ export const Multi = () => (
     <PageWrapper>
         <Select
             multi
+            placeholder="Select Input"
             name="test"
             options={[
                 { id: '1', label: '1', value: '1' },

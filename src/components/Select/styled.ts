@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 import { FormFieldContainer } from '../styled';
 
+const Placeholder = styled.div`
+    color: ${({ theme: { palettes } }) => palettes.greyScale.dark.bgColor};
+    margin-left: ${({ theme: { spacing } }) => spacing(2)};
+`;
+
 const AvailableOptions = styled.ul`
     background-color: ${({ theme: { palettes } }) => palettes.greyScale.lighter.bgColor};
     border: 1px solid;
@@ -139,4 +144,4 @@ const Wrapper = styled(FormFieldContainer)`
     }
 `;
 
-export { AvailableOptions, SelectedOptions, SelectedOptionWrapper, FieldWrapper, Wrapper };
+export { AvailableOptions, FieldWrapper, Placeholder, SelectedOptions, SelectedOptionWrapper, Wrapper };
