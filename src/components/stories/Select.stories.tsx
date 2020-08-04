@@ -22,6 +22,14 @@ export const Default = () => (
     </PageWrapper>
 );
 
+export const DefaultWithInformation = () => (
+    <PageWrapper>
+        <h3>Default Selector with further information</h3>
+        <p>Default Selector with a Label, Helper Text, and a Placeholder</p>
+        <Select label="Label" placeholder="Select input" message="Helper Text" name="test" options={[]} />
+    </PageWrapper>
+);
+
 export const WithOptions = () => (
     <PageWrapper>
         <h3>Selector with options</h3>
