@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { PageWrapper } from '../../core/storybook';
 import { Checkbox } from '..';
 
@@ -27,3 +27,22 @@ export const CheckedByDefault = () => (
         <Checkbox checked name="test" />
     </PageWrapper>
 );
+
+export const Controlled = () => {
+    const [checked, setChecked] = useState(false);
+
+    return (
+        <PageWrapper>
+            <h3>Controlled by the parent component</h3>
+            <Checkbox
+                checked={checked}
+                name="test"
+                onChange={(event, isChecked) => {
+                    setChecked(isChecked);
+                }}
+            >
+                Click to change state
+            </Checkbox>
+        </PageWrapper>
+    );
+};
