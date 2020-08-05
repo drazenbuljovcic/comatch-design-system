@@ -1,7 +1,17 @@
 import React from 'react';
+import styled from 'styled-components';
+
 import { PageWrapper } from '../../core/storybook';
 import { Image } from '..';
 
+const AvatarWrapper = styled.div`
+    display: flex;
+    text-align: center;
+
+    div {
+        margin-right: 50px;
+    }
+`;
 const DefaultAvatar =
     'https://user-images.githubusercontent.com/2351721/31314483-7611c488-ac0e-11e7-97d1-3cfc1c79610e.png';
 const UserAvatar =
@@ -41,11 +51,19 @@ export const Avatar = () => (
             Avatars should focus on a subject, using a simple background. They can represent a user or a brand (with a
             logo or branded graphic)
         </p>
-        <Image avatar alt="Test2" src="" />
-        <h3>Placeholder</h3>
-        <Image avatar alt="Test2" src={UserAvatar} />
-        <h3>User Avatar</h3>
-        <Image avatar alt="Test3" src={BrandAvatar} />
-        <h3>Brand Avatar</h3>
+        <AvatarWrapper>
+            <div>
+                <Image avatar alt="Test2" src="" />
+                <h3>Placeholder</h3>
+            </div>
+            <div>
+                <Image avatar alt="Test2" src={UserAvatar} />
+                <h3>User Avatar</h3>
+            </div>
+            <div>
+                <Image avatar alt="Test3" src={BrandAvatar} />
+                <h3>Brand Avatar</h3>
+            </div>
+        </AvatarWrapper>
     </PageWrapper>
 );
