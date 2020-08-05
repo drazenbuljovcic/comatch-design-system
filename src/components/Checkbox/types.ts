@@ -9,6 +9,9 @@ export type ComponentProps = WithClassAndId &
         children?: ReactNode;
         disabled?: boolean;
         hasError?: boolean;
-        onChange?: (event: ChangeEvent<HTMLInputElement>, isChecked: boolean) => void;
+        onChange?: (
+            event: ChangeEvent<HTMLInputElement> | React.MouseEvent<HTMLDivElement, MouseEvent>,
+            isChecked: boolean,
+        ) => void;
         value?: string;
     };

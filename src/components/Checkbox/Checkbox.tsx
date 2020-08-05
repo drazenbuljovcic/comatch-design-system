@@ -26,6 +26,10 @@ function Checkbox(props: ComponentProps) {
         <Wrapper
             {...buildComponentIdAndClassNameFromProps(rest, 'Checkbox', { disabled, hasError })}
             generateCss={generateCss}
+            onClick={(event) => {
+                event.persist();
+                onChange(event, !checked);
+            }}
         >
             <input
                 checked={checked}
