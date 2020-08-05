@@ -7,7 +7,6 @@ const CheckboxInput = styled.div`
     border-color: inherit;
     border-radius: 1px;
     height: 15px;
-    margin-top: 2px;
     position: relative;
     width: 15px;
 
