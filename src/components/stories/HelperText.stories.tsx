@@ -1,6 +1,17 @@
 import React from 'react';
+import styled from 'styled-components';
+
 import { PageWrapper } from '../../core/storybook';
 import { HelperText } from '..';
+
+const HelperWrapper = styled.div`
+    display: flex;
+    text-align: center;
+
+    > div {
+        margin-right: 100px;
+    }
+`;
 
 export default {
     title: 'Components/Helper Text',
@@ -14,35 +25,32 @@ export const Intro = () => (
     </PageWrapper>
 );
 
-export const Info = () => (
+export const Default = () => (
     <PageWrapper>
-        <HelperText level="info">Test</HelperText>
-    </PageWrapper>
-);
-
-export const Warning = () => (
-    <PageWrapper>
-        <HelperText level="warning">Test</HelperText>
-    </PageWrapper>
-);
-
-export const Success = () => (
-    <PageWrapper>
-        <HelperText level="success">Test</HelperText>
-    </PageWrapper>
-);
-
-export const Error = () => (
-    <PageWrapper>
-        <HelperText level="error">Test</HelperText>
+        <h3>Default</h3>
+        <HelperText>Test</HelperText>
     </PageWrapper>
 );
 
 export const WithLevel = () => (
     <PageWrapper>
-        <HelperText level="error">Test</HelperText>
-        <HelperText level="success">Test</HelperText>
-        <HelperText level="warning">Test</HelperText>
-        <HelperText level="info">Test</HelperText>
+        <HelperWrapper>
+            <div>
+                <h3>Info</h3>
+                <HelperText level="info">Test</HelperText>
+            </div>
+            <div>
+                <h3>Success</h3>
+                <HelperText level="success">Test</HelperText>
+            </div>
+            <div>
+                <h3>Warning</h3>
+                <HelperText level="warning">Test</HelperText>
+            </div>
+            <div>
+                <h3>Error</h3>
+                <HelperText level="error">Test</HelperText>
+            </div>
+        </HelperWrapper>
     </PageWrapper>
 );
