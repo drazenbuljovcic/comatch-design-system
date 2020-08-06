@@ -16,6 +16,7 @@ export const Intro = () => (
 
 export const Default = () => (
     <PageWrapper>
+        <h3>Default</h3>
         <Currency name="test" />
     </PageWrapper>
 );
