@@ -21,7 +21,14 @@ export const Default = () => (
     </PageWrapper>
 );
 
-export const WithError = () => (
+export const Disabled = () => (
+    <PageWrapper>
+        <h3>Disabled</h3>
+        <TextInput disabled label="Test" name="test" message="Test" />
+    </PageWrapper>
+);
+
+export const Error = () => (
     <PageWrapper>
         <h3>Text Field with Error</h3>
         <TextInput hasError label="Test" name="test" message="Test" />
